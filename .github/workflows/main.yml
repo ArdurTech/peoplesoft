@@ -23,8 +23,8 @@ jobs:
 
       - name: Build Docker images
         run: |
-          docker build -t bharti153/frontps:latest ./frontps
-          docker build -t bharti153/backps:latest ./backps
+          docker build -t bharti153/frontps:latest ./frontend
+          docker build -t bharti153/backps:latest ./backend
 
       - name: Push Docker images to Docker Hub
         run: |
