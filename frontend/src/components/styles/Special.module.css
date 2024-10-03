@@ -1,0 +1,184 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset body margin */
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif; 
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: center; /* Centering the header content */
+  align-items: center;
+  padding: 5px; 
+  background-color: #e76a17;
+  color: white;
+  height: 45px;
+  border-bottom: 1px solid #ddd;
+  position: fixed; /* Fix the header at the top */
+  top: 0; /* Ensure it's at the top */
+  left: 0; /* Align to the left */
+  right: 0; /* Extend to the right */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Menu Icon Styling */
+.menuIcon {
+  position: absolute; /* Absolute position to keep it on the left */
+  left: 2rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Welcome Message Styling */
+.welcomeMessage {
+  flex: 1; /* Takes available space for center alignment */
+  text-align: center; /* Center align */
+  font-size: 25px;
+  margin-top: 10px;
+  margin-left: 190px;
+  color: #fff;
+}
+
+/* Vertical Menu Styling */
+.verticalMenu {
+  position: absolute;
+  top: 39px; /* Positioned below the header */
+  left: 0;
+  color: black;
+  width: 230px;
+  margin-top: 5px; /* Adjust to avoid overlap with header */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.verticalMenu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.verticalMenu ul li {
+  padding: 10px;
+  cursor: pointer;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.verticalMenu ul li:last-child {
+  border-bottom: none;
+}
+
+/* Main Content Container */
+.container {
+  padding: 2rem;
+  text-align: center;
+  margin-top: 60px; /* Add margin to avoid overlap with the fixed header */
+}
+
+/* Company Info Section */
+#companyInfo {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* Footer Styling */
+.footer {
+  text-align: center;
+
+    background-color: #ca631e;
+  border-top: 1px solid #ddd;
+  height: 30px;
+  position: fixed; /* Fix the footer at the bottom */
+  left: 0; /* Align to the left */
+  right: 0; /* Extend to the right */
+  bottom: 0; /* Position at the bottom */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Paragraph Styling */
+.p {
+  text-align: center;
+}
+
+/* Carousel Container */
+.carousel {
+  width: 100%;
+  max-width: 1000px; /* Adjust as needed */
+  margin-top: 80px;
+}
+
+.carousel img {
+  width: 1000px;
+  height: 400px;
+  border-radius: 5px;
+}
+
+/* Vertical Menu SubMenu */
+.verticalMenu .subMenu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  position: absolute;
+  color: rgb(3, 0, 0);
+  left: 230px;
+  top: 33%;
+  background-color: rgb(255, 255, 255);
+ 
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.verticalMenu .hrMenu:hover .subMenu {
+  display: block;
+}
+
+.verticalMenu .subMenu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.verticalMenu .subMenu li:hover {
+  background-color: rgb(228, 223, 220); /* Background color on hover */
+}
+
+/* Right Header Buttons */
+.rightHeaderButtons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  right: 20px;
+}
+
+.employeeIdButton,
+.logoutButton {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(39, 8, 8);
+  cursor: pointer;
+}
+
+.employeeIdButton {
+  background-color: #e76a17; /* Green for Employee ID */
+}
+
+.logoutButton {
+  background-color: rgb(255, 251, 251); /* Red for Logout */
+}
+
+.employeeIdButton:hover,
+.logoutButton:hover {
+  opacity: 0.9;
+}
+
+.back {
+  width: 15px;
+  margin-left: -6px;
+  background-color: white;
+}

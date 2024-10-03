@@ -1,0 +1,58 @@
+#card {
+  max-width: 400px; /* Set a maximum width for the card */
+  margin: 20px auto; /* Center the card and add some top margin */
+  padding: 20px; /* Adjust padding for a smaller feel */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  margin-top:170px;
+  margin-bottom: 50px;/* Optional: Add shadow */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column; /* Arrange children in a column */
+  align-items: center; /* Center children horizontally */
+}
+
+#h2 {
+  font-size: 24px; /* Adjust the font size of the header */
+  text-align: center; /* Center the text */
+  margin-bottom: 20px; 
+  font-weight: bold;/* Add some space below the heading */
+}
+
+#card label,
+#card input {
+  font-weight: none;
+  margin-left: 0; /* Remove left margin for label */
+  margin-bottom: 5px; /* Reduce bottom margin */
+  width: 100%; /* Full width for labels */
+}
+
+#card input {
+  width: calc(100% - 20px); /* Adjust width to fit the card */
+  padding: 8px; /* Add some padding for inputs */
+}
+
+#card button {
+  margin-top: 15px; /* Add some top margin for spacing */
+  font-size: 14px; /* Adjust button font size */
+  width: 100%;
+  background: linear-gradient(135deg, #191d20da, #2781b6);  /* Make the button full width */
+}
+html, body {
+  height: 100%; /* Ensure the body takes the full height */
+  margin: 0;
+/* Remove default margins */
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Make the app full height */
+}
+
+.main-content {
+  flex: 1; /* This will push the footer to the bottom */
+}
+

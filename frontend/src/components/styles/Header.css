@@ -1,0 +1,44 @@
+/* Basic header styling */
+.head1_header {
+  background: #e76a17; /* Header background color */
+  width: 100%;
+  height: 50px; /* Height for better button visibility */
+  position: fixed; /* Fixed position to stay at the top */
+  top: 0; /* Start from the top */
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between elements */
+  padding: 0 10px; /* Horizontal padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensures it stays above other elements */
+  transform: translateY(-100%); /* Hide it initially */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.head1_header-visible {
+  transform: translateY(0); /* Slide down into view */
+}
+
+.head1_welcome {
+  flex: 1; /* Takes available space for center alignment */
+  text-align: center; /* Center align */
+  font-size: 25px;
+ 
+  color: #fff; /* White color for contrast */
+}
+
+
+
+.head1_go-back,
+.head1_logout {
+  font-size: 13px;
+  color: #0a0404; /* Color for buttons */
+  background-color: #fdfdfd; /* Primary color for buttons */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 5px 5px; /* Padding for button size */
+  cursor: pointer; /* Pointer cursor for button */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+}
+

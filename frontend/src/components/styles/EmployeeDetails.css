@@ -1,0 +1,76 @@
+.employee-details-container {
+    background-color: white;
+    border: 1px solid rgb(214, 206, 206);
+    padding: 10px; /* Decreased padding from 20px to 10px */
+    width: 650px;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 80px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 2px;
+    margin-left: 10px; /* Decreased margin-left */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 2px;
+    margin-left: 10px; /* Decreased margin-left */
+    color: #4d4848;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 3px; /* Decreased padding from 5px to 3px */
+    box-sizing: border-box;
+    border: 1px solid #ddd7d7;
+    border-radius: 4px;
+}
+
+.submit-button {
+    background: linear-gradient(135deg, #191d20da, #2781b6); 
+    color: white;
+    padding: 8px 10px; /* Decreased padding from 10px 15px to 8px 10px */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: darkgreen;
+}
+
+h4 {
+    text-align: center;
+    padding-bottom: 0.5rem; /* Keep this as is for spacing */
+    border-bottom: 1px solid #a7a0a0;
+    margin: 10px; /* Keep this margin */
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px; /* Decreased space below the row */
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 5px; /* Decreased space between fields */
+}
+
+.form-group:last-child {
+    margin-right: 0; /* Keep this as is */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
