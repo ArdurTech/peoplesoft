@@ -1,0 +1,104 @@
+.attendance-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    background-color: rgb(255, 255, 255);
+    height: 400px; /* Full viewport height */
+    
+    padding: 20px; /* Add some padding */
+}
+
+.attendance-heading {
+    font-size: 24px; /* Font size */
+    margin-bottom: 20px; /* Spacing below heading */
+}
+
+.attendance-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items */
+    background-color: rgb(255, 254, 254); /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(17, 17, 17, 17); /* Subtle shadow */
+    padding: 20px; /* Padding inside the box */
+}
+
+.employee-image {
+    width: 100px; /* Adjust the size of the employee image */
+    margin-bottom: 20px; /* Spacing below the image */
+}
+
+.attendance-form {
+    display: flex;
+    flex-direction: column; /* Stack fields vertically */
+    align-items: center; /* Center fields */
+    width: 100%; /* Full width */
+}
+
+label {
+    margin-bottom: 5px; /* Spacing below labels */
+    font-weight: bold; /* Bold text for labels */
+}
+
+/* Styling for the select dropdown */
+.work-mode-select {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 35px;
+    font-size: 14px;
+}
+
+/* Styling for the login input */
+.login-input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 35px;
+    font-size: 14px;
+}
+
+/* Styling for the comment input */
+.comment-input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 35px;
+    font-size: 14px;
+}
+
+
+.attendance-buttons {
+    display: flex;
+    justify-content: center; /* Center buttons */
+    width: 100%; /* Full width for button container */
+}
+
+.login-button,
+.logout-button {
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners for buttons */
+    padding: 10px 20px; /* Padding inside buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.login-button:hover,
+.logout-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.error-message {
+    color: red; /* Error message color */
+    margin-bottom: 10px; /* Spacing below error message */
+}

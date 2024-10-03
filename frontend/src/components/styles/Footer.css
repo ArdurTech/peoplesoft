@@ -1,0 +1,54 @@
+html, body {
+  height: 100%;
+  margin: 0; /* Remove default margins */
+}
+  
+  .app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make the app full height */
+  }
+  
+  .main-content {
+    flex: 1; /* This will push the footer to the bottom */
+  }
+  
+  .footer {
+    background: linear-gradient(135deg, #191d20da, #2b8ac2); /* Change this to any background color you prefer */
+    color: rgb(255, 245, 245);
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    width: 1240px; 
+    height: 80px;
+    text-align: center;
+ margin-bottom: -160px;
+ margin-left: -80px;
+ 
+
+ justify-content: space-between;
+ 
+
+
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+  }
+  
+  .footer-content span {
+    margin: 0 15px; /* Space between items */
+    font-size: 16px;
+    margin-top: 20px; 
+    color: white;
+     cursor: pointer;  
+  }
+  .location-link {
+    color: white; /* Change color to white */
+    cursor: pointer;
+    text-decoration: underline; /* Optional: add underline to indicate it's clickable */
+  }

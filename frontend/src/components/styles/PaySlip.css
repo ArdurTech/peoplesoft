@@ -1,0 +1,104 @@
+
+
+ .payslip-container {
+  width: 120%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgb(46, 37, 37);
+  background-color: #f9f9f9;
+}
+
+.payslip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.company-logo {
+  max-width: 150px;
+}
+
+.header-details {
+  text-align: right;
+}
+
+.company-name {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.payslip-title {
+  margin: 0;
+  font-size: 13px;
+}
+
+.payslip-form {
+  font-family: Arial, sans-serif;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-item label {
+  font-weight: normal;
+  margin-bottom: 3px;
+} 
+
+.inn 
+input[type="text"], input[type="number"], select {
+  border: none;
+  border-bottom: 0.5px solid #000;  
+  padding: 4px 4px;
+  font-size: 16px;
+  background-color: transparent;
+  width: 80%;  
+  outline: none;
+  color: #3b3434;
+}
+
+input::placeholder {
+  color: #beb6b6;
+  font-weight: normal;
+}
+
+input:focus, select:focus {
+  border-bottom: 1px solid #000;  
+}
+
+ .section-header {
+  margin-top: 6px;
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 1px solid #0a7a22;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  color: #bd0c0c;
+}
+
+.payslip-footer {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+  text-align: center;
+  color: #1d1010;
+}
+
+.payslip-footer p {
+  margin: 5px 0;
+} 

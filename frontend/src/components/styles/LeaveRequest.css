@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Roboto:wght@400&display=swap');
+
+.leave-request-container {
+    font-family: 'Roboto', sans-serif;
+    max-width: 700px;
+    margin: 5px auto;
+    padding: 10px;
+    margin-top: 60px;
+    padding-left: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 1px solid #131111;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.leave-request-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 0px;
+    color: rgb(21, 24, 8);
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 2px solid rgb(39, 38, 38);
+}
+
+.header-title {
+    font-size: 26px;
+    margin: 0;
+    font-weight: 700;
+    font-family: 'Lora', serif;
+    text-align: center;
+}
+
+.absence {
+    font-weight: bold;
+    color: #424141;
+}
+
+.company-logo {
+    width: 90px;
+    height: 70px;
+    margin-right: 400px;
+}
+
+.leave-request-form .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px; /* Reduced margin between rows */
+}
+
+.input-field {
+    flex: 1;
+    margin-right: 10px; /* Reduced margin on input fields */
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 4px; /* Reduced margin for labels */
+    font-weight: bold;
+    color: #333;
+}
+
+.input-field input,
+.input-field select,
+.input-field textarea {
+    width: 95%;
+    height: 32px; /* Reduced height of input fields */
+    padding: 5px; /* Reduced padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+.checkbox-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+}
+
+.checkbox-group label {
+    margin-bottom: 8px;
+    font-weight: normal;
+    color: #555;
+}
+
+.certification-note {
+    background-color: #fffacd;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    border: 1px solid #e6c34a;
+}
+
+.submit-btn {
+    text-align: center;
+}
+
+.submit-btn button {
+    padding: 10px 20px; /* Adjusted button padding */
+    background-color: #46882b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Adjusted button font size */
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn button:hover {
+    background-color: #71b863;
+}
+
+.leave-request-footer {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #1f1515;
+}
+
+.radio-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.radio-column {
+    flex: 1;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-group label {
+    margin-bottom: 4px; /* Reduced spacing between radio buttons */
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"] {
+    margin-right: 8px; /* Reduced space between radio button and label */
+}
+
+.Toastify__toast-container {
+    z-index: 9999;
+}
+
+.Toastify__toast {
+    font-family: 'Roboto', sans-serif;
+}

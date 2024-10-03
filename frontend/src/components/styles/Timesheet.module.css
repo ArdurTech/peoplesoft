@@ -1,0 +1,100 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding:5px;
+  margin-top: -360px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9; /* Light background color */
+}
+
+.header {
+  text-align: center;
+  margin: 10px;
+}
+
+.header h1 {
+  color: #333; /* Darker text color */
+  font-size: 24px;
+}
+
+.form {
+  background-color: #fff; /* White background for the form */
+  padding:5px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.tableContainer {
+  overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd; /* Light gray border */
+  padding: 6px;
+  text-align: left; /* Align text to the left */
+}
+
+.table th {
+  background-color: #193b1a; /* Primary color for the header */
+  color: white; /* White text for header */
+  font-weight: bold;
+  text-align: center;
+}
+
+.table td input {
+  width: 100%;
+  border: 1px solid #ccc; /* Light border for inputs */
+  border-radius: 4px; /* Slightly rounded corners */
+  padding: 5px; /* Padding for inputs */
+  font-size: 14px;
+}
+
+.table td input:focus {
+  border-color: #4CAF50; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.table td button {
+  background-color: #e78d38; /* Button color */
+  color: white; /* Button text color */
+  border: none;
+  border-radius: 4px;
+  padding: 2px 2px;
+  cursor: pointer; /* Pointer cursor for buttons */
+}
+
+.table td button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+.buttons button {
+  background-color: #28a745; /* Submit button color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 4px;
+  cursor: pointer;
+  font-size: 16px; /* Slightly larger text */
+}
+
+.buttons button:hover {
+  background-color: #218838; /* Darker shade on hover */
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999; /* High z-index for toast notifications */
+}

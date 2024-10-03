@@ -1,0 +1,28 @@
+.logout-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.logout-heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.log h3 {
+  margin-bottom: 15px;
+}
+
+.logout-button {
+  background-color: rgb(172, 71, 25); /* White background */
+  border: 2px solid rgb(155, 65, 38); /* Black border */
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: rgb(190, 57, 24);
+  color: white;
+}
