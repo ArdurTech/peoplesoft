@@ -1,0 +1,83 @@
+name: Deploy to AWS Elastic Beanstalk
+
+on:
+  push:
+    branches:
+      - main  # or the branch you want to trigger the deployment from
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+
+      - name: Build Docker images
+        run: |
+          docker build -t bharti153/frontps:latest ./frontend
+          docker build -t bharti153/backps:latest ./backend
+
+      - name: Push Docker images to Docker Hub
+        run: |
+          docker push bharti153/frontps:latest
+          docker push bharti153/backps:latest
+
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y awscli
+
+      # Deploy backend to AWS Elastic Beanstalk
+      - name: Deploy Backend to AWS Elastic Beanstalk
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: us-east-1
+          APPLICATION_NAME: peoplesoft
+          ENVIRONMENT_NAME: PS-backend
+          VERSION_LABEL: PS-backend-${{ github.sha }}
+        run: |
+          aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+          aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+          aws configure set region $AWS_REGION
+
+          aws elasticbeanstalk create-application-version \
+            --application-name $APPLICATION_NAME \
+            --version-label $VERSION_LABEL \
+            --source-bundle S3Bucket="ardur",S3Key="backend-bundle.zip"
+
+          aws elasticbeanstalk update-environment \
+            --environment-name $ENVIRONMENT_NAME \
+            --version-label $VERSION_LABEL
+
+      # Deploy frontend to AWS Elastic Beanstalk
+      - name: Deploy Frontend to AWS Elastic Beanstalk
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: us-east-1
+          APPLICATION_NAME: peoplesoft
+          ENVIRONMENT_NAME: PS-frontend
+          VERSION_LABEL: PS-frontend-${{ github.sha }}
+        run: |
+          aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+          aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+          aws configure set region $AWS_REGION
+
+          aws elasticbeanstalk create-application-version \
+            --application-name $APPLICATION_NAME \
+            --version-label $VERSION_LABEL \
+            --source-bundle S3Bucket="ardur",S3Key="frontend-bundle.zip"
+
+          aws elasticbeanstalk update-environment \
+            --environment-name $ENVIRONMENT_NAME \
+            --version-label $VERSION_LABEL
